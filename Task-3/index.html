@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JSX</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+    </head>
+    <body style="margin: 0; background-color: black; box-sizing: border-box; display: flex; justify-content: center; height: 100vh; align-items: center; ">
+        <div id="root"></div>
+        <script>
+           
+            
+            let image = React.createElement("img", {
+                src: "https://w0.peakpx.com/wallpaper/602/680/HD-wallpaper-sad-and-alon-alone-box-mom-people-sadness.jpg",
+                width: "120",
+                height: "120",
+                style: {borderRadius: "50%"}
+            }, null);
 
+            let symbol = React.createElement("div", {
+                style: {
+                    backgroundColor: "#00ff87",
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                }
+            }, null);
+            let symbolContainer = React.createElement("div", {
+                style: {
+                    backgroundColor: "white",
+                    width: "16px",
+                    height: "16px",
+                    borderRadius: "50%",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    position: "absolute",
+                    right: "170px",
+                    top: "60px"
+                }
+            }, symbol);
+            
+            let title = React.createElement("h1", {
+                style: {
+                    marginBottom: "4px",
+                    color: "gray"
+                }
+            }, "Alexandra Caulea");
+            let para = React.createElement("p", {
+                style: {
+                    marginTop: "4px",
+                    color: "gray",
+                    fontWeight: "300"
+                }
+            }, "I enjoy drinking a cup of coffee every day");
+            let titleContainer = React.createElement("div", {}, [title, para]);
+            
+            
+            let socialCard1Detail1 = React.createElement("h2", {
+                style: {
+                    marginBottom: "4px",
+                    color: "#bc47f7"
+                }
+            }, "172");
+            let socialCard1Detail2 = React.createElement("h3", {
+                style: {
+                    marginTop: "4px",
+                    color: "gray",
+                    fontWeight: "500"
+                }
+            }, "POSTS");
+            let socialCard1 = React.createElement("div", {
+                style: {
+                    textAlign: "center"
+                }
+            }, [socialCard1Detail1, socialCard1Detail2]);
+            
+            let socialCard2Detail1 = React.createElement("h2", {
+                style: {
+                    marginBottom: "4px",
+                    color: "#bc47f7"
+                }
+            }, "47");
+            let socialCard2Detail2 = React.createElement("h3", {
+                style: {
+                    marginTop: "4px",
+                    color: "gray",
+                    fontWeight: "500"
+                }
+            }, "FOLLOWERS");
+            let socialCard2 = React.createElement("div", {
+                style: {
+                    textAlign: "center"
+                }
+            }, [socialCard2Detail1, socialCard2Detail2]);
+            
+            let socialCard3Detail1 = React.createElement("h2", {
+                style: {
+                    marginBottom: "4px",
+                    color: "#bc47f7"
+                }
+            }, "20");
+            let socialCard3Detail2 = React.createElement("h3", {
+                style: {
+                    marginTop: "4px",
+                    color: "gray",
+                    fontWeight: "500"
+                }
+            }, "FOLLOWING");
+            let socialCard3 = React.createElement("div", {
+                style: {
+                    textAlign: "center"
+                }
+            }, [socialCard3Detail1, socialCard3Detail2]);
+            
+            let socialContainer = React.createElement("div", {
+                style: {
+                    display: "flex",
+                    justifyContent: "space-between",
+                    gap: "35px",
+                    marginBottom: "15px",                    
+                }
+            }, [socialCard1, socialCard2, socialCard3]);
+            
+            let button1 = React.createElement("div", {
+                style: {
+                    backgroundColor: "#bc47f7",
+                    color: "white",
+                    padding: "15px 30px",
+                    borderRadius: "10px"
+                }
+            }, "FOLLOW");
+            let button2 = React.createElement("div", {
+                style: {
+                    backgroundColor: "#fc49de",
+                    color: "white",
+                    padding: "15px 30px",
+                    borderRadius: "10px"
+                }
+            }, "MESSAGE");
+            
+            let buttonContainer = React.createElement("div", {
+                style: {
+                    display: "flex",
+                    gap: "25px"
+                }
+            }, [button1, button2]);
+            
+            let container = React.createElement("div", {
+                style: {
+                    width: "350px",
+                    height: "370px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    padding: "50px",
+                    backgroundColor: "white",
+                    borderRadius: "5px",
+                    position: "relative"
+                }
+            }, [image, symbolContainer, titleContainer, socialContainer, buttonContainer]);
+            
+            let root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(container);
+
+        </script>
+    </body>
+</html>
