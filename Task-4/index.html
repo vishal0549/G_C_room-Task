@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>React Element</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        
+        <script>
+
+            let headingTitle = React.createElement("h1", null, "Alex James");
+            let headingPara = React.createElement("p", null, "Software Developer");
+            let headingLink1 = React.createElement("a", {href: "#"}, "LinkedIn ");
+            let headingLink2 = React.createElement("a", {href: "#"}, " GitHub");
+
+            let heading = React.createElement("div", {style: {
+                borderBottom: "3px solid black",
+                paddingBottom: "5px"
+            }}, [headingTitle, headingPara, headingLink1, headingLink2]);         
+            
+            let expeTitle = React.createElement("h2", null, "Experience");
+            let expeSubTitle = React.createElement("h3", null, "Software Developer at Amazon");
+            let expePara = React.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem iure impedit optio placeat amet quae quod. Id hic, incidunt architecto deserunt natus quidem adipisci sapiente officia veritatis quo fugit rerum, corporis nesciunt assumenda, maiores minima distinctio illum temporibus placeat optio quaerat? Asperiores doloribus facilis molestiae eligendi necessitatibus repellat molestias expedita!");
+
+            let expe = React.createElement("div", {style: {
+                borderBottom: "3px solid black",
+                paddingBottom: "5px"
+            }}, [expeTitle, expeSubTitle, expePara]); 
+            
+            let moreTitle = React.createElement("h3", null, "Learning at Geekster");            
+            let morePara = React.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem iure impedit optio placeat amet quae quod. Id hic, incidunt architecto deserunt natus quidem adipisci sapiente officia veritatis quo fugit rerum, corporis nesciunt assumenda, maiores minima distinctio illum temporibus placeat optio quaerat? Asperiores doloribus facilis molestiae eligendi necessitatibus repellat molestias expedita!");
+
+            let more = React.createElement("div", {style: {
+                borderBottom: "3px solid black",
+                paddingBottom: "5px"
+            }}, [moreTitle, morePara]);
+
+            let skillTitle = React.createElement("h2", null, "Skills");            
+            let skillLi1 = React.createElement("li", null, "Java");
+            let skillLi2 = React.createElement("li", null, "HTML");
+            let skillLi3 = React.createElement("li", null, "CSS");
+            let skillLi4 = React.createElement("li", null, "JS");
+            let skillLi5 = React.createElement("li", null, "React");
+            let skillUl = React.createElement("ul", null, [skillLi1, skillLi2, skillLi3, skillLi4, skillLi5]);
+
+
+            let skill = React.createElement("div", {style: {
+                borderBottom: "3px solid black",
+                paddingBottom: "5px"
+            }}, [skillTitle, skillUl]);
+
+            let hobbyTitle = React.createElement("h2", null, "Hobbies");            
+            let hobbyLi1 = React.createElement("li", null, "Reading");
+            let hobbyLi2 = React.createElement("li", null, "Traveling");
+            let hobbyLi3 = React.createElement("li", null, "Playing Chess");
+            let hobbyOl = React.createElement("ol", null, [hobbyLi1, hobbyLi2, hobbyLi3]);
+
+
+            let hobby = React.createElement("div", {style: {
+                borderBottom: "3px solid black",
+                paddingBottom: "5px"
+            }}, [hobbyTitle, hobbyOl]);
+            
+            let container = React.createElement("div", {}, [heading, expe, more, skill, hobby]);
+
+            let root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(container);
+        </script>
+
+    </body>
+</html>
