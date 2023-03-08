@@ -32,7 +32,18 @@
                     color: "white",
                 }
             }, "+");
-            // let option = React.createElement("div", {}, null);
+            let dot1 = React.createElement("li", {}, null);
+            let dot2 = React.createElement("li", {}, null);
+            let dot3 = React.createElement("li", {}, null);
+            let option = React.createElement("ul", {
+                style: {
+                    lineHeight: "8px",
+                    color: "gray",
+                    position: "absolute",
+                    top: "0",
+                    right: "10px"
+                }
+            }, [dot1, dot2, dot3]);
             
             let topContainer = React.createElement("div", {
                 style: {
@@ -40,7 +51,7 @@
                     height: "60%",
                     position: "relative"
                 }
-            }, [imageTg, add]);
+            }, [imageTg, add, option]);
 
             let cardName = React.createElement("h3", { style: {marginBottom: "5px"} }, "David Jones");
             let cardDetail = React.createElement("p", { style: {margin: 0, color: "gray"}}, "Full Stack Developer");
