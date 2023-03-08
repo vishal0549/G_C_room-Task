@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create card using JSX</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+
+            function image() {
+                return (
+                    <img src="data:image/jpeg;base64,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" alt="no-img" style={
+                        {
+                            borderRadius: "50%",
+                            width: "100px",
+                            height: "100px"
+                        }
+                    } />
+                )
+            }
+            function imageContainer() {
+                return (
+                    <div style={{display: "flex", justifyContent: "center", height: "30%", alignItems: "center", position: "relative"}}>
+                        {image()}
+                        <div style={
+                            {
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                width: "14px",
+                                height: "14px",
+                                borderRadius: "50%",
+                                backgroundColor: "white",
+                                position: "absolute",
+                                top: "5px",
+                                left: "80px"
+                            }
+                        }>
+                            <div style={
+                                {
+                                    width: "10px",
+                                    height: "10px",
+                                    borderRadius: "50%",
+                                    backgroundColor: "#80ed99"
+                                }
+                            }></div>
+                        </div>
+                    </div>
+                )
+            }
+
+            function titleContainer() {
+                return (
+                    <div style={
+                        {
+                            textAlign: "center",
+                            height: "30%"
+                        }
+                    }>
+                        <h1 style={{margin: "15px 0 3px 0 ", color: "#6b705c" }}>Alex Jones</h1>
+                        <p style={{margin: "0", color: "gray"}}>Software Developer</p>
+                    </div>
+                )
+            }            
+
+            function social(rank, name, rank_color, name_color) {
+                return (
+                    <div style={
+                        {
+                            textAlign: "center"
+                        }
+                    }>
+                        <h2 style={{margin: "0", color: `#${rank_color}`}}>{rank}</h2>
+                        <h4 style={{margin: "0", fontWeight: "400", color: `${name_color}`}}>{name}</h4>
+                    </div>
+                )
+            }
+            function socialContainer() {
+                return (
+                    <div style={
+                        {
+                            height: "20%",
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "space-evenly",
+                            alignItems: "center",
+                        }
+                    }>
+                        {social(172, "POSTS", "7b2cbf", "gray")}
+                        {social(47, "FOLLOWERS", "7b2cbf", "gray")}
+                        {social(20, "FOLLOWING", "7b2cbf", "gray")}
+                    </div>
+                )
+            }
+
+            function button(name, color) {
+                return (
+                    <button style={
+                        {
+                            fontSize: "16px",
+                            padding: "10px 25px", 
+                            color: "white",
+                            backgroundColor: `#${color}`,
+                            border: "none",
+                            borderRadius: "5px"
+                        }
+                    }>{name}</button>
+                )
+            }
+
+            function buttonContainer() {
+                return (
+                    <div style={{height: "20%", width: "100%", display: "flex", justifyContent: "space-around", alignItems: "center"}}>
+                        {button("FOLLOW", "7b2cbf")}
+                        {button("MESSAGE", "f72585")}
+                    </div>
+                )
+            }
+
+            function container() {
+                return <div style={
+                    {
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        // gap: "20px/",
+                        padding: "40px",
+                        backgroundColor: "white",
+                        width: "320px",
+                        height: "300px",
+                        backgroundColor: "whitesmoke"
+                    }
+                }>
+                        {imageContainer()}
+                        {titleContainer()}
+                        {socialContainer()}
+                        {buttonContainer()}
+                    </div>
+            }
+
+            let root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(container());
+        </script>
+    </body>
+</html>
