@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>create simple card using jsx</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        let ims = {
+            borderRadius: "10px 10px 0 0",
+        }
+
+        function add() {
+            return (
+                <div style={
+                    {
+                        height: "25px",
+                        width: "30px",
+                        borderRadius: "8px",
+                        backgroundColor: "#72dbdb",
+                        color: "white",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }
+                }>
+                    +
+                </div>
+            )
+        }
+
+        function verticalDot() {
+            return (
+                <div style={
+                    {
+                        lineHeight: "8px",
+                        position: "absolute",
+                        left: "340px",
+                    }
+                }>                    
+                        <li></li>
+                        <li></li>
+                        <li></li>                    
+                </div>
+            )
+        }
+
+        function option() {
+            return (
+                <div style={
+                    {
+                        display: "flex",
+                        justifyContent: "space-between",
+                        margin: "0 10px",
+                        position: "absolute",
+                        top: "10px"
+                    }
+                }>
+                    {add()}
+                    {verticalDot()}
+                </div>
+            )
+        }
+
+        function topSection() {
+            return (
+                <div style={
+                    {
+                        height: "60%",
+                        width: "100%",
+                        position: "relative"
+                    }
+                }>
+                    <img style={ims} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2oQB-9lh3qvUwHaMBGCWR4WPgcJt0hPtog&usqp=CAU" height= "100%" width= "100%" />
+                    {option()}
+                </div>
+            )
+        }
+
+        function titleContainer() {
+                return (
+                    <div style={
+                        {
+                            textAlign: "center",
+                        }
+                    }>
+                        <h1 style={{margin: "15px 0 3px 0 " }}>Alex Jones</h1>
+                        <p style={{margin: "0", color: "gray"}}>Software Developer</p>
+                    </div>
+                )
+            } 
+
+        function social(rank, name, rank_color, name_color) {
+                return (
+                    <div style={
+                        {
+                            textAlign: "center"
+                        }
+                    }>
+                        <h2 style={{margin: "0", fontWeight: "200", color: `#${rank_color}`}}>{rank}</h2>
+                        <h5 style={{margin: "0", fontWeight: "300", color: `${name_color}`}}>{name}</h5>
+                    </div>
+                )
+            }
+            function socialContainer() {
+                return (
+                    <div style={
+                        {
+                            height: "100%",
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "space-evenly",
+                            alignItems: "center",                            
+                            margin: "20px 0",
+                        }
+                    }>
+                        {social(26, "Shoot", "black", "gray")}
+                        {social(94, "Following", "black", "gray")}
+                        {social(139, "Followers", "black", "gray")}
+                    </div>
+                )
+            }
+
+        function bottomSection() {
+            return (
+                <div style={
+                    {
+                        // height: "40%",
+                        width: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                    }
+                }>
+                    {titleContainer()}
+                    {socialContainer()}
+                </div>
+            )
+        }
+
+        function container() {
+            return (
+                <div style={
+                    {
+                        border: "2px solid black",
+                        height: "400px",
+                        width: "360px",
+                        borderRadius: "10px",
+                        backgroundColor: "white"
+                    }
+                }>
+                    {topSection()}
+                    {bottomSection()}
+                </div>
+            )
+        }
+
+        let root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(container());
+    </script>
+</body>
+</html>
