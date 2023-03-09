@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>create jsx element for resume</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> 
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function titleSection() {
+            return (
+                <div>
+                    <h1>Alex Jones</h1>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Github</a>
+                </div>
+            )
+        }
+
+        function experieceSection() {
+            return (
+                <div>
+                    <h2>Expericece</h2>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias quibusdam officia assumenda odit? Tenetur amet cupiditate perspiciatis? Vero, sit ipsam? Porro nemo dolore rerum ex consectetur iusto mollitia maxime sunt? Maxime provident eius consequatur corporis architecto quia quis debitis sapiente? Fugiat aperiam repellendus sint velit reprehenderit nisi voluptatibus voluptas voluptatum.</p>
+                </div>
+            )
+        }
+
+        function educationSection() {
+            return (
+                <div>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus maiores atque, tempore rerum porro, minus voluptates sequi illo iste quasi ratione corporis eius consequatur molestias impedit, neque modi corrupti eum? Iste quisquam, soluta doloremque deleniti cum adipisci porro natus perspiciatis. Blanditiis pariatur voluptatibus perferendis deserunt quisquam repellendus, exercitationem eos facere ex temporibus, corrupti necessitatibus neque eligendi praesentium nobis modi iste ratione reprehenderit iusto quaerat consectetur! Sunt consectetur perspiciatis delectus sint. Vero natus eius deleniti modi delectus fuga dignissimos labore nisi earum sequi soluta, quis quod. Commodi sunt ad dolores sed quod aliquam dolore quisquam ex, molestiae, inventore veritatis voluptas voluptatibus!</p>
+                </div>
+            )
+        }
+
+        function skillSection() {
+            return (
+                <div>
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Testing</li>
+                        <li>API Designing</li>
+                        <li>System Design</li>
+                    </ul>
+                </div>
+            )
+        }
+
+        function HobbieSection() {
+            return (
+                <div>
+                    <h2>Hobbies</h2>
+                    <ol>
+                        <li>Table Tennis</li>
+                        <li>Reading Books</li>
+                        <li>Biography</li>
+                        <li>Teaching</li>
+                    </ol>
+                </div>
+            )
+        }
+
+        function container() {
+            return (
+                <div>
+                    {titleSection()}
+                    <hr />
+                    {experieceSection()}
+                    <hr />
+                    {educationSection()}
+                    <hr />
+                    {skillSection()}
+                    <hr />
+                    {HobbieSection()}
+                    <hr />
+                </div>
+            )
+        }
+
+        let root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(container());
+    </script>
+</body>
+</html>
