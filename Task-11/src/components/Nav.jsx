@@ -14,8 +14,8 @@ const Nav = () => {
             <div>Education</div>
         </div>
         <div className="right-nav-container">
-            <div>Contact Us</div>
-            <div>Log In</div>
+            <div className="right-nav-container-btn">Contact Us</div>
+            <div className="right-nav-container-btn">Log In</div>
             <div className='active'>Sign Up</div>
         </div>
     </div>
