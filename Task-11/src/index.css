@@ -50,7 +50,7 @@
   background: green;
   color: white;
 }
-.right-nav-container > .active {
+.right-nav-container > .right-nav-container-btn {
   padding: 10px 0;
 }
 
