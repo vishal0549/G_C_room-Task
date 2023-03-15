@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import MacBook from './components/MacBook';
 
 function App() {
