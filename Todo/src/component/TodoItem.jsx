@@ -17,6 +17,7 @@ const TodoItem = ({ items }) => {
                             </h5>&nbsp;&nbsp;
                             <button>Toggle</button>&nbsp;&nbsp;&nbsp;
                             <button>Delete</button>
+                            <p>check</p>
                         </div>
                     )
                 })
