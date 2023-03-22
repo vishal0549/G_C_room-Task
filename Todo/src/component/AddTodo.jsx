@@ -16,6 +16,22 @@ const addTodoItem = () => {
     setData([ ...data, newItem ]);
 }
 
+const handleToggle = (idx) => {
+    var filterTask = data.map( (item, i) => {
+        return (
+            idx === i ? {...item, status: !item.status} : item
+        )
+    })
+    setData(filterTask);
+}
+
+const deleteItem = (idx) => {
+    var filteredData = data.filter( (item, i) => {
+        return idx != i;
+    })
+    setData(filteredData);
+}
+
   return (
     <>
         <div style={{ marginTop: "100px" }}>
@@ -30,7 +46,7 @@ const addTodoItem = () => {
             
             <button onClick={ addTodoItem }>Add Item</button>
 
-            <TodoItem items={ data } />
+            <TodoItem items={ data } deleteItem={ deleteItem } handleToggle={ handleToggle } />
 
         </div>
     </>
