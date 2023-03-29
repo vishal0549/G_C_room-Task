@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container table thead tr > th {
+  border: 1px solid;
+  padding: 10px;
+}
+.table-container tr > td {
+  width: 500px;
+  padding: 10px 20px;
+  border: 1px solid;
+  text-align: center;
+}
