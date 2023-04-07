@@ -2,6 +2,8 @@ import { createContext, useState } from 'react'
 
 const AppContext = createContext();
 
+export const mySecondContext = createContext();
+
 const DataProvider = ({ children }) => {
 
     const data = {
