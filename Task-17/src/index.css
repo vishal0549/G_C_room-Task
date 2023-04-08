@@ -12,12 +12,16 @@
 
 #title {
     width: 40%;
-    text-align: center;
+    /* text-align: center; */
+    padding-left: 60px;
 }
 
 #menu {
     width: 60%;
-    /* text-align: center; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
 }
 
 a {

@@ -1,6 +1,24 @@
-import React from 'react'
+import { useContext } from 'react';
+import { AuthContex } from './Context';
 
 const Nav = () => {
+
+  const { setIsLoggedIn } = useContext(AuthContex);
+
+  const loginProfile = {
+    marginLeft: "20px",
+    height: "40px",
+    width: "40px",
+    borderRadius: "50%",
+    backgroundColor: "yellow",
+    color: "black",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: "18px",
+    fontWeight: "700",
+  }
+
   return (
     <div className='nav'>
         <div id="title">
@@ -11,7 +29,13 @@ const Nav = () => {
             <a href="">Profile</a>
             <a href="">Products</a>
             <a href="">Support</a>
-            <button>Logout</button>
+            <button 
+              style={{padding: "8px 20px"}}
+              onClick={ () => setIsLoggedIn(false) }  
+            >
+              Logout
+            </button>
+            <span style={ loginProfile }>A</span>
         </div>
     </div>
   )
