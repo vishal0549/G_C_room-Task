@@ -3,7 +3,7 @@ import { AuthContex } from './Context';
 
 const Nav = () => {
 
-  const { setIsLoggedIn } = useContext(AuthContex);
+  const { setIsLoggedIn, userNameForProfile } = useContext(AuthContex);
 
   const loginProfile = {
     marginLeft: "20px",
@@ -35,7 +35,9 @@ const Nav = () => {
             >
               Logout
             </button>
-            <span style={ loginProfile }>A</span>
+            <span style={ loginProfile } title={ userNameForProfile }>
+              { userNameForProfile.charAt(0) }
+            </span>
         </div>
     </div>
   )

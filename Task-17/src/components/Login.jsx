@@ -11,12 +11,14 @@ let style = {
 
 const Login = () => {
 
-    const { setIsLoggedIn } = useContext(AuthContex);
+    const { setIsLoggedIn, setUserNameForProfile } = useContext(AuthContex);
 
     const [ user, setUser ] = useState({
         name: "",
         pass: "",
     })
+
+    setUserNameForProfile(user.name);
 
     const handleAuthentication = () => {
         
@@ -51,7 +53,7 @@ const Login = () => {
         </div>
         <br />
         <div>
-            <input type="text" placeholder='Password' onChange={ (e) => {
+            <input type="password" placeholder='Password' onChange={ (e) => {
                 setUser( {
                     ...user,
                     pass : e.target.value
