@@ -29,3 +29,15 @@ a {
     margin-right: 50px;
     text-decoration: none;
 }
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-note {
+    font-size: 14px;
+    width: 400px;
+    text-align: justify;
+}

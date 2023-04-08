@@ -24,7 +24,8 @@ const Login = () => {
         
         if(
             user.name === "Admin" && user.pass === "admin@123" ||
-            user.name === "Login" && user.pass === "login@123"
+            user.name === "Login" && user.pass === "login@123" ||
+            user.name === "Classes" && user.pass === "class@123"
         ) {
             alert("Login Successfull");
             setIsLoggedIn(true)
@@ -40,39 +41,55 @@ const Login = () => {
     }
 
   return (
-    <div style={ style }>
-        <h3 style={ { marginBottom: "10px" }}>Login Form</h3>
-        <div>
-            <input type="text" placeholder='User Name' onChange={ (e) => { 
-                setUser({
-                    ...user,
-                    name : e.target.value
-                }) }}
-                value={ user.name }
-            />
-        </div>
-        <br />
-        <div>
-            <input type="password" placeholder='Password' onChange={ (e) => {
-                setUser( {
-                    ...user,
-                    pass : e.target.value
-                }) }}
-                value={ user.pass }
-            />
-        </div>
-        <br />
-        <div>
+    <div className='login-page'>
+        <div style={ style }>
+            <h3 style={ { marginBottom: "10px" }}>Login Form</h3>
+            <div>
+                <input type="text" placeholder='User Name' onChange={ (e) => { 
+                    setUser({
+                        ...user,
+                        name : e.target.value
+                    }) }}
+                    value={ user.name }
+                />
+            </div>
+            <br />
+            <div>
+                <input type="password" placeholder='Password' onChange={ (e) => {
+                    setUser( {
+                        ...user,
+                        pass : e.target.value
+                    }) }}
+                    value={ user.pass }
+                />
+            </div>
+            <br />
+            <div>
 
-            <button
-                style={{ padding: "8px 20px"}}
-                onClick={ 
-                    handleAuthentication 
-                }
-            >
-                Login
-            </button>
+                <button
+                    style={{ padding: "8px 20px", marginBottom: "10px"}}
+                    onClick={ 
+                        handleAuthentication 
+                    }
+                >
+                    Login
+                </button>
 
+            </div>        
+        </div>
+        <div className='login-note'>
+
+            <p style={{ marginBottom: "10px"}}>
+                Note: Try to login with below id & password because User id & password is hardCoded not <s>dynamic!</s>
+            </p>
+            <ul style={{ listStyle: "none"}}>
+
+                <li style={{marginBottom: "8px"}}><u>User Id</u> --- <u>Password</u></li>
+                <li>Admin --- admin@123</li>
+                <li>Login --- login@123</li>
+                <li>Classes --- class@123</li>
+
+            </ul>
         </div>
     </div>
   )
