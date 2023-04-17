@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .nav {
@@ -41,3 +42,43 @@ a {
     width: 400px;
     text-align: justify;
 }
+
+.cardStyle {
+    width: 280px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+}
+
+.card-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.tech-container {
+    height: 400px;
+    width: 850px;
+    margin: 50px auto;
+    /* background: #000; */
+    /* color: white; */
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+}
+
+.left-sub-container {
+    width: 30%;
+    background: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.right-sub-container {
+    width: 70%;
+    padding: 25px;
+}
+

@@ -4,7 +4,7 @@ export const AuthContex = createContext();
 
 const CustomProvider = ({ children }) => {
 
-    const [ isLoggedin, setIsLoggedIn ] = useState(true);
+    const [ isLoggedin, setIsLoggedIn ] = useState(false);
 
     const [ userNameForProfile, setUserNameForProfile ] = useState("");
 

@@ -1,9 +1,11 @@
 import { useContext } from 'react';
 import { AuthContex } from './Context';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Nav = () => {
 
   const { setIsLoggedIn, userNameForProfile } = useContext(AuthContex);
+  const navigate = useNavigate();
 
   const loginProfile = {
     marginLeft: "20px",
@@ -28,14 +30,17 @@ const Nav = () => {
 
         <div id="menu">
 
-            <a href="">Home</a>
-            <a href="">Profile</a>
-            <a href="">Products</a>
-            <a href="">Support</a>
+            <Link to="/">Home</Link>
+            <Link to="/tech">Technologies</Link>
+            <Link to="/products">Products</Link>
+            <Link to="/contact">ContactUs</Link>
 
             <button 
               style={{padding: "8px 20px"}}
-              onClick={ () => setIsLoggedIn(false) }  
+              onClick={ () => {
+                setIsLoggedIn(false);
+                navigate("/");
+              }}                
             >
               Logout
             </button>
