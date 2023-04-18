@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+
+.counter-container > button {
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
