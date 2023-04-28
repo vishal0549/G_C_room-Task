@@ -1,9 +1,9 @@
-import { useid } from 'react'
+import { useId } from 'react'
 import InputComp from './components/InputComp'
 
 const App = () => {
 
-  const id = useid();
+  const id = useId();
   console.log(id);
   return (
     <div>
