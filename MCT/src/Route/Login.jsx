@@ -69,6 +69,8 @@ const Login = () => {
                     <a href='#'>Help</a>
                   </div>
               </div>
+              <p>username: admin</p>
+              <p>PWD: Admin@123</p>
             </div>
           </div>
         </div>
