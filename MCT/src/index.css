@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* login page */
+
+.card-height {
+    /* height: 500px; */
+}
+
+.login-container {
+    background-color: #D6F1F0;
+}
+
+.icon {
+    color: #42CFCA;
+}
+.b-color {
+    border-color: #3BC3BE !important;
+}
+
+.btn {
+    background-color: #42CFCA !important;
+    color: white !important;
+}
+
+.login-title, .login-form-label, .card-bottom > a {
+    color: #42CFCA !important;
+}
+
+.card-bottom > a {
+    text-decoration: none;
+    color: #ccf5e5;
+}
+
+.login-detail-title {
+    rotate: 90deg;
+    top: 100px;
+    left: -30px;
+}
+
+.col-left {
+    clip-path: ellipse(81% 100% at 8% 80%);
+    background-color: #3BC3BE;
+    color: white;
+}
+
+/* login page */
+
+
+/* nav component */
+
+.nav-container {
+    background-color: #3BC3BE;
+    color: white;
+    height: 5rem;
+}
+
+.nav-left {
+    
+}
+
+.nav-right {
+    gap: 2rem;
+    font-size: 20px;
+    font-weight: 500;    
+}
+
+/* nav component  */
+
+
+
+/* footer component  */
+
+.footer-container {
+    height: 4rem;
+    background-color: #52ddd8;
+    color: white;
+    font-weight: 600;
+}
+
+/* footer component  */
+
+
+.row > .card-container {
+    display: flex;
+    flex-wrap: wrap !important;
+    justify-content: space-evenly;
+}
+.read-blog-card-container {
+    
+}
+.read-blog-card-container > .card {
+    width: 20rem;
+    /* height: 20rem; */
+}
+
+.read-blog-card-container .card > .card-header {
+    height: 10rem;
+}
